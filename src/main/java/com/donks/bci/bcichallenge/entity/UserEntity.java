@@ -32,7 +32,7 @@ public class UserEntity {
     @ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(
             name = "inner_table",
-            joinColumns = {@JoinColumn(name = "candidate_id", referencedColumnName = "id")},
-            inverseJoinColumns = {@JoinColumn(name = "candidateSkills_id", referencedColumnName = "id")})
+            joinColumns = {@JoinColumn(name = "user_id", referencedColumnName = "id")},
+            inverseJoinColumns = {@JoinColumn(name = "phone_id", referencedColumnName = "id")})
     private List<PhoneNumber> phones;
 }
